@@ -139,27 +139,24 @@ renderCantidad()
 renderTotal()
 
 }
-btnVaciar.addEventListener( 'click', () =>
+btnVaciar.addEventListener( 'click', () =>{
 
-Swal.fire({
-    title: 'Estas seguro?',
-    text: "esta a punto de vaciar todo el carro",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Si, vaciar',
-    cancelButtonText: 'No, cancelar'
-
-  }).then((result) => {
-    
-    if (result.isConfirmed) {
-      vaciarCarrito()
-    }
-  })
+    Swal.fire({
+        title: 'Seguro?',
+        text: "se va a vaciar todo el carro",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, borrar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          vaciarCarrito()
+        }
+      })
 
 
-)
+})
 
 
 const renderCarrito = () => {
@@ -198,6 +195,21 @@ const renderTotal = () => {
     })
 
     precioTotal.innerText = total
+}
+
+const showMensaje = (producto) => {
+
+    Toastify({
+
+        text:`Se agregó ${producto} al carrito`,
+        duration: 3000,
+        gravity: 'bottom',
+        position: 'left',
+        style: {
+            background: "green",
+        }
+
+    }).showToast()
 }
 
 if (carritoEnLS){
