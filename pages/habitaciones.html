@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="hospedaje, cartagena, hostal, barato, estadia ">
+    <meta name="descripcion" content="hospedaje en cartagena hostal comodo, casero y pet friendly, admitimos mascotas ">
+
+    <title>Hostal Casa el prado Cartagena</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script defer src="../assets/js/stock.js"></script>
+    <script defer src="../assets/js/modal.js"></script>
+    <script defer src="../assets/js/main.js"></script>
+
+</head>
+
+<body>
+    <!-- Encabezado principal del Sitio -->
+    <header class="bordered rounded">
+
+        <h1>Reserva tu habitacion</h1>
+        <button id="boton-carrito"> <i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito"> 0</span></button>
+    </header>
+
+
+    <section>
+        <div class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../assets/img/hab3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <h1 class="hab-h1">Abajo nuestras habitaciones ↓</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <main class="body-hostal">
+
+
+        <section>
+            <div id="Container" class="habitacion1">
+
+            </div>
+
+
+        </section>
+    </main>
+
+    <div  id="modal-contenedor" class="modal-contenedor">
+
+        <div id="modal-carrito" class="modal-carrito">
+            <button id="carrito-cerrar"><i class="fas fa-times-circle"></i></button>
+            
+            <h3 class="titulo-modal"> Resumen de reserva</h3>
+            <div id="carrito-contenedor">
+
+                <div class="productoEnCarrito">
+                     <!--
+                    <p>habitacion</p>
+                    <p>precio: $1200</p>
+                    <button class="buton-eliminar"><i class="fa-solid fa-trash-can"></i></button>
+                     -->
+                </div>
+
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button class="eliminar" id="vaciarCarrito">eliminar carrito</button>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+
+        <ul class="footer-ul">
+            <li class="footer-li">
+                Hostal casa el prado
+            </li>
+            <li class="footer-li">
+                Cartagena de Indias, Colombia
+            </li>
+            <li class="footer-li">
+                Info & Reservaciones +57 3194792521
+            </li>
+            <li class="footer-li">
+                ECO & PET FRIENDLY
+
+            </li>
+        </ul>
+
+
+        <div class="socialMedia">
+            <h3 class="socialMedia"><strong>Siguenos</strong></h3>
+            <ul class="socialMedia">
+
+
+                <li class="socialMedia">
+                    <a target="blank" href="https://www.facebook.com/people/Casa-Hostal-el-Prado/100063713193272/">
+                        <i class="fa-brands fa-facebook-f icon-footer"></i>
+                    </a>
+                </li>
+                <li class="socialMedia">
+                    <a target="blank" href="https://www.instagram.com/casahostalelprado_/?hl=es">
+                        <i class="fa-brands fa-instagram icon-footer"></i>
+                    </a>
+                </li>
+                <li class="socialMedia">
+                    <a target="blank" href="https://api.whatsapp.com/send?phone=573194792521">
+                        <i class="fa-brands fa-whatsapp icon-footer"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*ICONS*/
+
+i.icon-footer{
+    color: white;
+    font-size: 30px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+li,
+ul,
+span {
+
+    font-family: 'Roboto Slab', serif;
+
+}
+
+li,
+ul {
+    font-weight: 300;
+}
+
+p {
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #4a4a4a;
+    line-height: 24px;
+}
+
+
+
+
+h1,
+h2,
+h3 {
+
+    font-weight: 600;
+    color: #4a4a4a;
+    line-height: 30px;
+
+}
+.hab-h1{ 
+    color: #fff;
+}
+
+a {
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 24px;
+}
+
+button {
+    background-color: #1a923e;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+button.eliminar{
+
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.modal-contenedor{
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left:0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease-in-out;
+
+}
+
+.modal-carrito{
+
+    background-color: #fff;
+    width: 320px;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+.buton-eliminar, #carrito-cerrar {
+    padding: 5px;
+}
+
+
+h3.titulo-modal{
+
+    text-align: center;
+}
+
+.productoEnCarrito{
+
+    text-align: center;
+    padding: 15px 0;
+    gap: 2.5em;
+    display: flex;
+}
+
+.modal-contenedor--visible{
+
+    opacity: 1;
+    visibility: visible;
+}
+/*MENU* RESPONSIVE*/
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    margin: 2em 0 0 0;
+}
+
+nav {
+
+    background: white;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace {
+    position: absolute;
+    padding: 5px 50px;
+}
+
+.logo-menu {
+    height: 85px;
+}
+
+nav ul.menu {
+
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+nav ul.menu li {
+
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul.menu li a {
+
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 7px 11px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active,
+li a:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.checkbtn {
+
+    font-size: 40px;
+    color: green;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+
+    display: none;
+}
+
+/*SLIDER*/
+
+    .slider {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .slider ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+
+        animation: cambio 20s infinite alternate;
+        animation-timing-function: ease-in;
+
+    }
+
+    .slider li {
+
+        width: 100%;
+        list-style: none;
+    }
+
+    .slider img {
+
+        width: 100%;
+    }
+
+    .carousel-caption,.pet-boton {
+        position: absolute;
+        right: 0;
+        bottom: 1.25rem;
+        left: 58%;
+        padding-top: 1.25rem;
+        padding-bottom: 20%;
+        color: #fff;
+        text-align: center;
+    }
+
+    .pet-boton {
+        padding-bottom: 0%;
+        left: -42%;
+        right: 0;
+        bottom: 0.25rem;
+    }
+  @keyframes cambio {
+
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50% {margin-left: -200%}
+    70%{margin-left: -200%;}
+
+    75% {margin-left: -300%}
+    100%{margin-left: -300%;}
+      
+  }
+
+@media (max-width: 952px) {
+
+    .enlace {
+
+        padding-left: 20px;
+    }
+
+    nav ul.menu li a {
+
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+
+        display: block;
+        margin-top: 7px
+    }
+
+    ul.menu,
+    menu {
+
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: white;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+    }
+
+    nav ul.menu li {
+
+        display: block;
+        margin: 50px 0;
+        line-height: 10px;
+
+    }
+
+    nav ul.menu li a {
+
+        font-size: 20px;
+
+    }
+
+    li a:hover,
+    li a.active {
+
+        background: none;
+        color: rgb(124, 225, 65);
+
+    }
+
+    #check:checked~ul.menu {
+        left: 0;
+        background-color: white;
+        backdrop-filter: blur(34px) brightness(115%);
+        opacity: 0.88;
+    }
+
+}
+
+/*FIN DE MENU RESPONSIVE*/
+
+/*Slider*/
+
+img.slider {
+    width: 100%;
+    height: 50%;
+}
+
+
+/* pagina INDEX*/
+
+.container {
+    border-bottom: 0;
+    padding-bottom: 60px;
+}
+
+main.body-hostal {
+    width: 80%;
+    margin: 5% 10%;
+    display: grid;
+}
+
+section.main-hostal {
+    margin: 5% 0;
+    display: inline-block;
+}
+
+div.nuestro-hostal {
+    display: flex;
+    flex-direction: column;
+}
+
+div.pet-eco-index {
+
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+img.pet,
+img.eco {
+    width: 60px;
+}
+
+img.card-hab-main {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+    object-fit: cover;
+
+}
+img.card-hab-main:hover {
+    transform: scale(1.08);
+    opacity: 0.8;
+    
+
+}
+hr {
+    height: 0.5px;
+    display: block;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    background-color: #1a923e;
+    margin: 2em 0;
+}
+
+div.flex-hab {
+    display: grid;
+    padding-left: 0%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+p.hab-desc-index-text {
+    margin-top: 0;
+}
+
+a.boton--index {
+    margin-top: 3em;
+}
+.pet-boton {
+    padding-bottom: 12%;
+    left: -42%;
+    right: 0;
+    bottom: 1.25rem;
+}
+
+a.boton:hover {
+    background-color: #55d07a;
+}
+
+.habitaciones-main-index {
+    width: 100%;
+    display: block;
+}
+
+.habitaciones-main-index-mobile {
+
+    display: none;
+}
+
+.habitaciones-desc-index {
+    width: 100%;
+    padding-left: 0%;
+    text-align: justify;
+
+}
+
+div.turismo-index {
+    text-align: justify;
+}
+
+img.turismo-index {
+    margin: 3em 0;
+    border-radius: 10px;
+}
+
+
+/* pagina habitaciones*/
+
+.desc-hab {
+    width: 100%;
+    height: 50%;
+}
+
+/*.desc-hab-1 {
+    padding-left: 5%;
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 20px;
+    align-content: space-evenly;
+}*/
+
+.desc-hab-1 {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 0px;
+    align-content: space-evenly;
+}
+
+.habitacion1 {
+    display: grid;
+    padding-left: 0%;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 2em;
+}
+
+.hab1-nos{
+
+    display:flex;
+}
+div.hab-slider{
+    background-image: url(../img/habitaciones1.jpg);
+}
+img.hab-img {
+    width: 100%;
+    border-radius: 2%;
+    object-fit: cover !important;
+}
+img.hab-img:hover{
+
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+div.titulo-hab-boton{
+
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 6%;
+}
+
+div.hab-descr-ec{
+
+    display: grid;
+    gap: 10px;
+}
+span.precio{
+    padding-bottom: 12px;
+}
+div.lista-hab{
+
+    display: grid;
+    gap: 20px;
+}
+div.boton{
+    text-align: center;
+}
+
+div.tit-hab {
+    margin: 6% 0;
+    text-align: center;
+}
+
+.hab-hr {
+    margin: 5% 0;
+}
+
+p.hab,
+span.hab {
+
+    font-size: 20px;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 24px;
+}
+span.precio {
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+
+/*
+.hab-ul {
+    list-style: none;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-columns: 1fr;
+    text-align: initial;
+    gap: 20px;
+}*/
+
+.hab-ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: initial;
+    gap: 5px;
+}
+.hab-li{
+    font-size: 17px;
+    color: #4a4a4a;
+}
+
+/*NOSOTROS*/
+.desc-hab-nos,
+.desc-hab-nos-enc {
+    width: 100%;
+}
+.desc-hab-nos{
+width: 100%;
+    display: grid;
+    grid-template-rows: inherit;
+    grid-auto-rows: min-content;
+    gap: 22px;
+}
+
+.nos-hab {
+    width: 100%;
+}
+
+.desc-hab-nos-enc {
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-rows: inherit;
+    grid-auto-rows: min-content;
+    gap: 20px;
+
+}
+
+div.pet-eco-nos {
+    text-align: center;
+}
+
+img.petNOS,
+img.ecoNOS {
+    width: 11%;
+    margin-top: 1em;
+
+}
+
+.desc-enc {
+    width: 100%;
+
+}
+
+.nos-ul {
+    column-count: 1;
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+}
+
+.nos-il {
+
+    margin-bottom: 0.5em;
+
+}
+
+iframe.mapa {
+    width: 100%;
+}
+
+/*Contacto*/
+
+section.contacto-hostal {
+    width: 43%;
+    margin-left: 0%;
+    margin-bottom: 1em;
+}
+
+/*formulario*/
+
+.columna-form {
+    width: 100%;
+}
+
+div.formulario {
+    width: 80%;
+}
+
+.formulario input {
+    font-size: 14px;
+    width: 100%;
+    height: 44px;
+    display: inline-block;
+    line-height: 42px;
+    border: 1px solid #eee;
+    border-radius: 0px;
+    margin-bottom: 30px;
+}
+
+.formulario input:focus {
+    box-shadow: none;
+    border: 1px solid #eee;
+}
+
+.formulario textarea {
+    font-size: 14px;
+    width: 100%;
+    min-width: 100%;
+    min-height: 120px;
+    height: 120px;
+    max-height: 180px;
+    border: 1px solid #eee;
+    border-radius: 0px;
+    margin-bottom: 30px;
+}
+
+.formulario textarea:focus {
+    box-shadow: none;
+    border: 1px solid #eee;
+}
+
+.formulario button.filled-button {
+    background-color: #1a923e;
+    color: #fff;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 300;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.formulario button.filled-button:hover {
+    background-color: #121212;
+    color: #fff;
+}
+
+
+.desc-conc {
+    width: 58%;
+    margin-left: 0%;
+}
+
+.desc-conc-text {
+    width: 40%;
+    margin-left: 0%;
+}
+
+/*footer*/
+
+ul.socialMedia-index {
+    margin: 0;
+
+}
+
+ul.socialMedia {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+li.socialMedia {
+    margin: 1% 3%;
+
+}
+
+section.socialMedia {
+    width: 100%;
+}
+
+img.socialMedia-index {
+    height: 30px;
+    width: 30px;
+}
+
+.footer {
+    background-color: #1a923e;
+    margin-bottom: 0;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.socialMedia {
+
+    display: grid;
+    grid-template-rows: min-content;
+    align-content: start;
+}
+
+h3.socialMedia {
+    color: #fff;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 5% 0 1% 10%;
+}
+
+
+ul.footer-ul {
+    color: #fff;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 5% 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: end;
+
+}
+
+li.footer-li {
+    padding: 0.5% 12px 0.5% 15%;
+}
+div.boton {
+    text-align: initial;
+    display: block;
+}
+div.boton2{
+
+    display: none;
+}
+
+@media only screen and (min-width: 721px) and (max-width: 1088px){
+
+    /*SLIDER*/
+
+    .slider {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 36px;
+}
+
+    .slider ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: none;
+        animation-timing-function: ease-in;
+    }
+
+/*INDEX*/
+div.flex-hab{
+
+    grid-template-columns: none;
+    grid-template-rows: inherit;
+    gap: 2em;
+}
+
+.habitaciones-main-index-mobile {
+    display: block;
+    height: 300px;
+}
+
+.habitaciones-main-index {
+    display: none;
+}
+
+.habitaciones-desc-index {
+    padding-left: 14px;
+    width: 100%;
+}
+    /*HABITACTIONES*/
+
+    .habitacion1 {
+        grid-template-columns: none;
+        grid-template-rows: inherit;
+        gap: 2em;
+    }
+
+    .desc-hab,
+    .desc-hab-1 {
+        width: 100%;
+        padding-left: 0;
+    }
+    .nos-hab{
+        
+    height: 200px;
+    }
+    .desc-hab-1 {
+
+        text-align: start;
+    }
+
+    .hab-ul {
+        column-count: 1;
+    }
+
+    a.boton {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    div.boton {
+        text-align: initial;
+        display: block;
+    }
+    div.boton2{
+
+        display: none;
+    }
+    
+/*NOSOTROS*/
+
+.hab1-nos{
+
+    display: flex;
+    flex-direction: column;
+}
+}
+@media only screen and (min-width: 200px) and (max-width: 720px) {
+
+
+    /*SLIDER*/
+
+    .slider {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        padding-top: 70px;
+    }
+    
+        .slider ul {
+            display: flex;
+            padding: 0;
+            width: 400%;
+            animation: none;
+            animation-timing-function: ease-in;
+        }
+        .pet-boton {
+            padding-bottom: 9%;
+            left: -42%;
+            right: 0;
+            bottom: 1.25rem;
+        }
+        .carousel-caption {
+            left: 50%;
+            padding-bottom: 15%;
+        }
+    /*MENU HAMBURGUESA*/
+
+
+    ul.navbar-nav {
+        display: none;
+    }
+
+/*fin MENU HAMBURGUESA*/
+
+
+    /*INICIO*/
+    main.body-hostal {
+        gap: 20px;
+    }
+
+    .habitaciones-main-index {
+
+        display: none;
+    }
+
+    img.pet,
+    img.eco {
+        width: 45px;
+    }
+
+    .habitaciones-main-index-mobile {
+
+        display: block;
+    }
+    div.flex-hab {
+        grid-template-columns: none;
+        grid-template-rows: inherit;
+        gap: 2em;
+    }
+
+    .habitaciones-desc-index {
+        width: 100%;
+    }
+
+    div.boton-index {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    a.boton--index {
+        margin-top: 3em 0;
+        margin: 2em 0;
+    }
+
+    img.card-hab-main {
+        width: 100%;
+        height: 100%;
+    }
+
+    img.turismo-index {
+        height: 50%;
+    }
+
+    /*HABITACTIONES*/
+
+    .habitacion1 {
+        grid-template-columns: none;
+        grid-template-rows: inherit;
+        gap: 2em;
+        flex-direction: column;
+    }
+
+    .desc-hab,
+    .desc-hab-1 {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .desc-hab-1 {
+
+        text-align: start;
+        gap: 1em;
+    }
+
+    .hab-ul {
+        grid-template-columns: none;
+    }
+    a.boton {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    a.boton-pet {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        text-decoration-line: underline !important;
+    }
+
+    div.titulo-hab-boton {
+        grid-template-columns: 1fr;
+    }
+    div.boton {
+        text-align: initial;
+        display: none;
+    }
+    div.boton2{
+
+        display: block;
+    }
+    
+/*FOOTER*/
+    .footer {
+        grid-template-columns: 1fr;
+        padding: 2em 0;
+        gap: 13px;
+    }
+
+    li.footer-li {
+        padding: 0;
+    }
+
+    div.socialMedia {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    h3.socialMedia {
+        margin: 0;
+    }
+
+    ul.socialMedia {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /*NOSOTROS*/
+
+    iframe.mapa {
+        width: 90%;
+    }
+
+    /*CONTACTO*/
+
+    div.formulario {
+        width: 100%;
+    }
+
+     /*FORMULARIO*/
+     div.formulario {
+        width: 100%;
+    }
+
+    /**FOOTER*/
+
+    footer {
+        grid-template-columns: inherit;
+    }
+
+    ul.footer-ul {
+        color: #fff;
+        font-size: 17px;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin: 0;
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+    }
+
+    div.socialMedia {
+        display: grid;
+        grid-template-rows: 1fr;
+        align-content: unset;
+        justify-content: center;
+        width: 85%;
+        gap: 13px;
+        
+    }
+    h3.socialMedia {
+        text-align: center;
+        font-size: 17px;
+    }
+
+   
+
+}
